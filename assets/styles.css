@@ -128,3 +128,17 @@ body{
     left: 135px;
     position: absolute;
 }
+
+/* fix ui */
+
+.search.error {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border: 5px solid red;
+    border-radius: 0 15px 0 15px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0,2);
+    font-size: 19px;
+}

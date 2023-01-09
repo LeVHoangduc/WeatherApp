@@ -22,6 +22,10 @@ async function changeWeather(input){
     console.log(data.visibility);
     if(data.cod === 200){
         content.classList.remove("hide");
+        search.setAttribute("placeholder",'search city u want');
+        search.classList.remove("error");
+        search.classList.remove("rung");
+        // 
         visibility.innerText=data.visibility + 'm';
         city.innerText = data.name;
          country.innerText = data.sys.country;
@@ -41,7 +45,12 @@ async function changeWeather(input){
 
     }
     else
+    {
+        search.setAttribute("placeholder",'City is WRONG , try again !!');
+        search.classList.add("error");
+        search.classList.add("rung");
         content.classList.add("hide");
+    }
 }
 
 
