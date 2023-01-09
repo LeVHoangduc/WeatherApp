@@ -27,7 +27,15 @@ async function changeWeather(input){
         search.classList.remove("rung");
         // 
         visibility.innerText=data.visibility + 'm';
-        city.innerText = data.name;
+        // city.innerText === 'Da Nang' || city.innerText === 'da nang'||
+        if(input === 'danang')
+        {
+            console.log("ua duoc ne");
+            city.innerText = 'Da Nang';
+        }else
+        {
+            city.innerText = data.name;
+        }
          country.innerText = data.sys.country;
         let temp = value.innerText = data.main.temp;
          shortDesc.innerText = data.weather[0]?data.weather[0].main:'';
