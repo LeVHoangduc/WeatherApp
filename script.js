@@ -10,6 +10,7 @@ var time = document.querySelector('.time');
 var search = document.querySelector("input");
 var content = document.querySelector(".content");
 var body = document.querySelector("body");
+var button = document.querySelector("button");
 
 
 async function changeWeather(input){
@@ -52,4 +53,10 @@ search.addEventListener("keypress",function(e){
         changeWeather(searchValue);
         search.value ='';
     }
+})
+
+button.addEventListener("click",(e)=>{
+    let searchValue=search.value.trim();
+    changeWeather(searchValue);
+    search.value ='';
 })
